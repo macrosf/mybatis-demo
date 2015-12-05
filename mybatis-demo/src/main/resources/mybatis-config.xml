@@ -3,20 +3,20 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
 <configuration>
 	<typeAliases>
-		<typeAlias alias="Student" type="com.mybatis3.domain.student" />
+		<typeAlias alias="Student" type="com.mybatis3.domain.Student" />
 	</typeAliases>
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/mybatis3"/>
 				<property name="username" value="root"/>
 				<property name="password" value="00000000"/>
 			</dataSource>
 		</environment>
 	</environments>
 	<mappers>
-		<mapper resource="com/mybatis3/mapper/StudentMapper.xml" />
+		<mapper resource="com/mybatis3/mappers/StudentMapper.xml" />
 	</mappers>
 </configuration>
